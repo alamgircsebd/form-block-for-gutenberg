@@ -1,0 +1,55 @@
+.fbfg-forms__outer-wrap {
+	border: 2px solid #007cba;
+    .fbfg-forms-main-form {
+        .fbfg-forms-form-hidden-data {
+            display:none;
+		}
+		.fbfg-forms-required-wrap {
+			float: right;
+		}
+		input[type=checkbox] , input[type=radio]{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+	
+	
+	.block-editor-block-list__block {
+		padding: 0;
+		margin: 0;
+	}
+	
+}
+
+
+.fbfg-form-notice{
+	background-color: #FFF8E5;
+    border-left: 5px solid #FFB901;
+    padding: 8px 10px;
+    font-size: 13px;
+    line-height: 20px;
+	color: #32373c;
+}
+//width for select box in editor
+select.fbfg-forms-select-box.fbfg-forms-input {
+    max-width: 100%;
+}
+
+.fbfg-form-emailto {
+    margin-top: 10px;
+}
+.fbfg-size-type-field-tabs.fbfg-size-type-field__common-tabs.fbfg-inline-margin.fbfg-email-controls-tabs .components-tab-panel__tabs {
+    margin-right: 0;
+}
+.fbfg-forms-recaptcha-button {
+	display: block;
+	width: 50%;
+	margin-bottom: 15px;
+}
+[data-type="fbfg/forms"] .block-editor-block-variation-picker__variations {
+	display: flex;
+  justify-content: center;
+}
+[data-type="fbfg/forms"] .block-editor-block-variation-picker__variation.components-button.has-icon {
+	width: 90px;
+}
