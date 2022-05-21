@@ -14,7 +14,7 @@ const attributes = {
 	},
 	required : {
         type: "boolean",
-        default: false
+        default: true
 	},
 	placeholder: {
         type: "string",

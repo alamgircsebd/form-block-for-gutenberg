@@ -7,10 +7,7 @@ import { Fragment } from "react"
 import styling from "./styling"
 import map from 'lodash/map'
 import FBFG_Block_Icons from "@Controls/block-icons"
-// Import all of our Text Options requirements.
 import TypographyControl from "../../components/typography"
-
-// Import Web font loader for google fonts.
 import WebfontLoader from "../../components/typography/fontloader"
 
 const {
@@ -72,7 +69,6 @@ const ALLOWED_BLOCKS = [
 ]
 
 class FBFGFormsEdit extends Component {
-
 	constructor() {
 		super( ...arguments )
 		this.blockVariationPickerOnSelect = this.blockVariationPickerOnSelect.bind( this )
@@ -83,7 +79,6 @@ class FBFGFormsEdit extends Component {
 	}
 
 	blockVariationPickerOnSelect ( nextVariation = this.props.defaultVariation ) {
-			
 		if ( nextVariation.attributes ) {
 			this.props.setAttributes( nextVariation.attributes );
 		}
@@ -101,7 +96,6 @@ class FBFGFormsEdit extends Component {
 	}
 
 	render() {
-
         const { attributes, setAttributes,variations,hasInnerBlocks } = this.props
 
         const {
@@ -204,11 +198,9 @@ class FBFGFormsEdit extends Component {
 			failedMessageBGColor,
         } = attributes
 
-
 		let loadsubmittextGoogleFonts;
 
-		if( submitTextloadGoogleFonts == true ) {
-			
+		if ( submitTextloadGoogleFonts == true ) {
 			const qconfig = {
 				google: {
 					families: [ submitTextFontFamily + ( submitTextFontWeight ? ':' + submitTextFontWeight : '' ) ],
@@ -223,8 +215,7 @@ class FBFGFormsEdit extends Component {
 		
 		let loadlabelGoogleFonts;
 
-		if( labelloadGoogleFonts == true ) {
-			
+		if ( labelloadGoogleFonts == true ) {
 			const qconfig = {
 				google: {
 					families: [ labelFontFamily + ( labelFontWeight ? ':' + labelFontWeight : '' ) ],
@@ -238,9 +229,7 @@ class FBFGFormsEdit extends Component {
 		}
 		
 		let loadinputGoogleFonts;
-
-		if( inputloadGoogleFonts == true ) {
-			
+		if ( inputloadGoogleFonts == true ) {
 			const qconfig = {
 				google: {
 					families: [ inputFontFamily + ( inputFontWeight ? ':' + inputFontWeight : '' ) ],
@@ -252,10 +241,8 @@ class FBFGFormsEdit extends Component {
 				</WebfontLoader>
 			)
         }
-		
 
 		const generalSettings = () => {
-
 			return (
 				<PanelBody
 					title={ __( "General", "form-block-for-gutenberg"  ) }
@@ -441,11 +428,9 @@ class FBFGFormsEdit extends Component {
 							onChange={ value => setAttributes( { confirmationUrl: value } ) }
 						/>
 					}
-
 				</PanelBody>
 			);
 		}
-		
 
 		const submitButtonSettings = () => {
 			return (
@@ -631,7 +616,6 @@ class FBFGFormsEdit extends Component {
 			)
 		}
 
-
 		const afterSubmitActions = () => {
 			return (
 				<PanelBody
@@ -667,7 +651,6 @@ class FBFGFormsEdit extends Component {
 							{
 								( tab ) => {
 									let tabout
-	
 									if ( "to" === tab.name ) {
 										tabout = (
 											<TextControl
@@ -891,8 +874,7 @@ class FBFGFormsEdit extends Component {
 						min={ 0 }
 						max={ 100 }
 					/>
-				</PanelBody>
-				
+				</PanelBody>	
 			)
 		}
 
@@ -969,22 +951,20 @@ class FBFGFormsEdit extends Component {
 		}
 
 		const renderButtonHtml = () => {
-					
-				return (
-					<button onClick={ this.onSubmitClick } className="fbfg-forms-main-submit-button">
-						<RichText
-							tagName="div"
-							placeholder={ __( "Submit" , "form-block-for-gutenberg" ) }
-							value={ submitButtonText }
-							onChange={ ( value ) => setAttributes( { submitButtonText: value } ) }
-							className='fbfg-forms-main-submit-button-text'
-							multiline={ false }
-							allowedFormats={[ 'core/bold', 'core/italic', 'core/strikethrough' ]}
-						/>
-					</button>
-				);
-			}
-		
+			return (
+				<button onClick={ this.onSubmitClick } className="fbfg-forms-main-submit-button">
+					<RichText
+						tagName="div"
+						placeholder={ __( "Submit" , "form-block-for-gutenberg" ) }
+						value={ submitButtonText }
+						onChange={ ( value ) => setAttributes( { submitButtonText: value } ) }
+						className='fbfg-forms-main-submit-button-text'
+						multiline={ false }
+						allowedFormats={[ 'core/bold', 'core/italic', 'core/strikethrough' ]}
+					/>
+				</button>
+			);
+		}
 
 		if ( ! hasInnerBlocks ) {
 			return (
@@ -1050,13 +1030,10 @@ class FBFGFormsEdit extends Component {
 	}
 
 	componentDidMount() {
-
 		const { attributes, setAttributes } = this.props
 
 		// Assigning block_id in the attribute.
 		setAttributes( { block_id: this.props.clientId.substr( 0, 8 ) } )
-
-		
 
 		// Pushing Style tag for this block css.
 		const $style = document.createElement( "style" )
@@ -1069,29 +1046,24 @@ class FBFGFormsEdit extends Component {
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-
 		var element = document.getElementById( "fbfg-style-forms-" + this.props.clientId.substr( 0, 8 ) )
 
 		if( null !== element && undefined !== element ) {
 			element.innerHTML = styling( this.props )
 		}
-
 	}
 	
 	renderReadyClasses(id){
 		var mainDiv = document.getElementById( "block-" + id )
 		var formscope = mainDiv.getElementsByClassName('fbfg-forms__outer-wrap')
 		
-		if( null !== formscope[0] && undefined !== formscope[0] ) {
-			
+		if ( null !== formscope[0] && undefined !== formscope[0] ) {
 			var editorwrap = formscope[0].children;
 			var formInnerWrap = editorwrap[0].children;
 			var editorBlockWrap = formInnerWrap[0].getElementsByClassName('block-editor-block-list__layout')
 			var sibling = editorBlockWrap[0].children
-			
-			
-			for (let index = 0; index < sibling.length; index++) {
 
+			for ( let index = 0; index < sibling.length; index++ ) {
                 if( sibling[index].classList.contains("fbfg-col-2") && sibling[index+1].classList.contains("fbfg-col-2") ){
                     let div = document.createElement('div');
                     div.className = 'fbfg-col-2-wrap fbfg-col-wrap-' + index;                        

@@ -287,6 +287,7 @@ class FBFG_Init_Blocks {
 
 		$blocks       = array();
 		$saved_blocks = FBFG_Admin_Helper::get_admin_settings_option( '_fbfg_blocks' );
+		$admin_email  = get_option( 'admin_email', true );
 
 		if ( is_array( $saved_blocks ) ) {
 			foreach ( $saved_blocks as $slug => $data ) {
@@ -338,6 +339,7 @@ class FBFG_Init_Blocks {
 				'fbfg_site_url'        => FBFG_URI,
 				'enableConditions'     => apply_filters_deprecated( 'enable_block_condition', array( true ), '1.23.4', 'uag_enable_block_condition' ),
 				'enableMasonryGallery' => apply_filters( 'uag_enable_masonry_gallery', true ),
+				'default_to_email'     => $admin_email,
 			)
 		);
 

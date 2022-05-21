@@ -1,11 +1,189 @@
-.fbfg-typography-range-options .components-base-control__label{width:auto;display:block;margin-bottom:8px}
-.fbfg-forms__outer-wrap{border:2px solid #007cba}.fbfg-forms__outer-wrap .fbfg-forms-main-form .fbfg-forms-form-hidden-data{display:none}.fbfg-forms__outer-wrap .fbfg-forms-main-form .fbfg-forms-required-wrap{float:right}.fbfg-forms__outer-wrap .fbfg-forms-main-form input[type=checkbox],.fbfg-forms__outer-wrap .fbfg-forms-main-form input[type=radio]{margin-top:5px;margin-bottom:5px}.fbfg-forms__outer-wrap .block-editor-block-list__block{padding:0;margin:0}.fbfg-form-notice{background-color:#fff8e5;border-left:5px solid #ffb901;padding:8px 10px;font-size:13px;line-height:20px;color:#32373c}select.fbfg-forms-select-box.fbfg-forms-input{max-width:100%}.fbfg-form-emailto{margin-top:10px}.fbfg-size-type-field-tabs.fbfg-size-type-field__common-tabs.fbfg-inline-margin.fbfg-email-controls-tabs .components-tab-panel__tabs{margin-right:0}.fbfg-forms-recaptcha-button{display:block;width:50%;margin-bottom:15px}[data-type="fbfg/forms"] .block-editor-block-variation-picker__variations{display:flex;justify-content:center}[data-type="fbfg/forms"] .block-editor-block-variation-picker__variation.components-button.has-icon{width:90px}
-.fbfg-columns__wrap:before{content:"";position:absolute;border:1px dashed #03ddff;top:0;right:0;bottom:0;left:0;z-index:1}
-.fbfg-columns__wrap:before{content:"";position:absolute;border:1px dashed #03ddff;top:0;right:0;bottom:0;left:0;z-index:1}
-.fbfg-forms-phone-wrap .fbfg-form-phone-country-editor{line-height:normal}
-.fbfg-forms-checkbox-wrap input[type=checkbox],.fbfg-form-checkbox-option input[type=checkbox]{margin-right:15px;vertical-align:middle}.fbfg-forms-checkbox-controls{margin-top:10px}.fbfg-form-checkbox-option-delete.has-icon{margin:0;padding:10px;vertical-align:middle}
-.fbfg-forms-radio-wrap input[type=radio],.fbfg-form-radio-option input[type=radio]{margin-right:15px;vertical-align:middle}.fbfg-forms-radio-controls{margin-top:10px}.fbfg-form-radio-option-delete.has-icon{margin:0;padding:10px;vertical-align:middle}.fbfg-forms-main-form .fbfg-inner-input-view{width:35% !important;margin:0 10px !important;vertical-align:middle}.fbfg-forms-main-form .fbfg-forms-radio-wrap input[type=radio]{border-radius:50%}
-.fbfg-forms-select-controls{margin-top:10px}.fbfg-form-select-option-delete.has-icon{margin:0;padding:10px;vertical-align:middle}.fbfg-forms-main-form .fbfg-inner-input-view{width:35% !important;margin:0 10px !important;vertical-align:middle}
-.fbfg-switch{position:relative;display:inline-block}.fbfg-switch input{opacity:0;width:0;height:0}.fbfg-switch .fbfg-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;transition:.4s}.fbfg-switch .fbfg-slider:before{position:absolute;content:"";left:4px;bottom:4px;background-color:#fff;transition:.4s}.fbfg-switch input:checked+.fbfg-slider:before{transform:translateX(26px)}.fbfg-slider.round{border-radius:34px}.fbfg-slider.round:before{border-radius:50%}
-.components-base-control.minDate,.components-base-control.maxDate{width:30%;display:inline-block}.fbfg-forms-date-invalidate{color:red;font-weight:400}
-.fbfg-forms-editor-privacy-link .components-base-control__help{color:red}
+.fbfg-typography-range-options .components-base-control__label {
+  width: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+.fbfg-forms__outer-wrap {
+  border: 2px solid #007cba;
+}
+.fbfg-forms__outer-wrap .fbfg-forms-main-form .fbfg-forms-form-hidden-data {
+  display: none;
+}
+.fbfg-forms__outer-wrap .fbfg-forms-main-form .fbfg-forms-required-wrap {
+  float: right;
+}
+.fbfg-forms__outer-wrap .fbfg-forms-main-form input[type=checkbox], .fbfg-forms__outer-wrap .fbfg-forms-main-form input[type=radio] {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.fbfg-forms__outer-wrap .block-editor-block-list__block {
+  padding: 0;
+  margin: 0;
+}
+
+.fbfg-form-notice {
+  background-color: #FFF8E5;
+  border-left: 5px solid #FFB901;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #32373c;
+}
+
+select.fbfg-forms-select-box.fbfg-forms-input {
+  max-width: 100%;
+}
+
+.fbfg-form-emailto {
+  margin-top: 10px;
+}
+
+.fbfg-size-type-field-tabs.fbfg-size-type-field__common-tabs.fbfg-inline-margin.fbfg-email-controls-tabs .components-tab-panel__tabs {
+  margin-right: 0;
+}
+
+.fbfg-forms-recaptcha-button {
+  display: block;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+[data-type="fbfg/forms"] .block-editor-block-variation-picker__variations {
+  display: flex;
+  justify-content: center;
+}
+
+[data-type="fbfg/forms"] .block-editor-block-variation-picker__variation.components-button.has-icon {
+  width: 90px;
+}
+.fbfg-columns__wrap:before {
+  content: "";
+  position: absolute;
+  border: 1px dashed #03ddff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.fbfg-columns__wrap:before {
+  content: "";
+  position: absolute;
+  border: 1px dashed #03ddff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.fbfg-forms-phone-wrap .fbfg-form-phone-country-editor {
+  line-height: normal;
+}
+.fbfg-forms-checkbox-wrap input[type=checkbox], .fbfg-form-checkbox-option input[type=checkbox] {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.fbfg-forms-checkbox-controls {
+  margin-top: 10px;
+}
+
+.fbfg-form-checkbox-option-delete.has-icon {
+  margin: 0;
+  padding: 10px;
+  vertical-align: middle;
+}
+.fbfg-forms-radio-wrap input[type=radio], .fbfg-form-radio-option input[type=radio] {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.fbfg-forms-radio-controls {
+  margin-top: 10px;
+}
+
+.fbfg-form-radio-option-delete.has-icon {
+  margin: 0;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.fbfg-forms-main-form .fbfg-inner-input-view {
+  width: 35% !important;
+  margin: 0 10px !important;
+  vertical-align: middle;
+}
+
+.fbfg-forms-main-form .fbfg-forms-radio-wrap input[type=radio] {
+  border-radius: 50%;
+}
+.fbfg-forms-select-controls {
+  margin-top: 10px;
+}
+
+.fbfg-form-select-option-delete.has-icon {
+  margin: 0;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.fbfg-forms-main-form .fbfg-inner-input-view {
+  width: 35% !important;
+  margin: 0 10px !important;
+  vertical-align: middle;
+}
+/* The switch - the box around the slider */
+.fbfg-switch {
+  position: relative;
+  display: inline-block;
+  /* The slider */
+}
+.fbfg-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.fbfg-switch .fbfg-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+.fbfg-switch .fbfg-slider:before {
+  position: absolute;
+  content: "";
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.fbfg-switch input:checked + .fbfg-slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.fbfg-slider.round {
+  border-radius: 34px;
+}
+
+.fbfg-slider.round:before {
+  border-radius: 50%;
+}
+.components-base-control.minDate, .components-base-control.maxDate {
+  width: 30%;
+  display: inline-block;
+}
+
+.fbfg-forms-date-invalidate {
+  color: red;
+  font-weight: 400;
+}
+.fbfg-forms-editor-privacy-link .components-base-control__help {
+  color: red;
+}
+
+/*# sourceMappingURL=blocks.css.map*/

@@ -14,9 +14,9 @@ import FBFG_Block_Icons from "@Controls/block-icons"
 const variations = [
 	{
 		name: 'simple-contact-form',
-		label: __( 'Simple Contact Form' , 'form-block-for-gutenberg' ),
+		label: __( 'Contact Form' , 'form-block-for-gutenberg' ),
 		icon:  FBFG_Block_Icons.form1,
-		title: __( 'Simple Contact Form', 'form-block-for-gutenberg' ),
+		title: __( 'Contact Form', 'form-block-for-gutenberg' ),
 		attributes: {
 		},
 		isDefault: true,
@@ -24,7 +24,7 @@ const variations = [
 			[ 'fbfg/forms-name', { name:__('First Name', 'form-block-for-gutenberg'),placeholder:__('First name', 'form-block-for-gutenberg'),nameRequired:true } ],
 			[ 'fbfg/forms-name', { name:__('Last Name', 'form-block-for-gutenberg'),placeholder:__('Last name', 'form-block-for-gutenberg'),nameRequired:true } ],
 			[ 'fbfg/forms-email',{ emailRequired:true } ],
-			[ 'fbfg/forms-textarea',{ textareaRequired:true } ],
+			[ 'fbfg/forms-textarea',{ textareaRequired:false } ],
 		],
 		scope: [ 'block' ],
 	},
@@ -59,7 +59,6 @@ const variations = [
 					{ "optiontitle": __( "Option Name 2", 'form-block-for-gutenberg' ),"optionvalue": __( "Option Value 2" , 'form-block-for-gutenberg' ) },
 					{ "optiontitle": __( "Option Name 3", 'form-block-for-gutenberg' ),"optionvalue": __( "Option Value 3" , 'form-block-for-gutenberg' ) },
 					{ "optiontitle": __( "Option Name 4", 'form-block-for-gutenberg' ),"optionvalue": __( "Option Value 4" , 'form-block-for-gutenberg' ) },
-
 				] 
 			} ],
 			[ 'fbfg/forms-name', { name:__('Subject', 'form-block-for-gutenberg'),placeholder:__('Enter your subject', 'form-block-for-gutenberg'),nameRequired:true } ],

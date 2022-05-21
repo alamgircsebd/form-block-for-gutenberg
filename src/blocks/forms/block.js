@@ -9,7 +9,6 @@ import save from "./save"
 import "./style.scss"
 import "./editor.scss"
 import variations from './variations';
-
 import { __ } from '@wordpress/i18n';
 
 const {

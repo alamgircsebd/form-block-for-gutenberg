@@ -37,7 +37,7 @@ const attributes = {
 	},	
 	afterSubmitToEmail : {
 		type: "string",
-		default:'',
+		default: fbfg_blocks_info.default_to_email,
 	},
 	afterSubmitCcEmail : {
 		type: "string",
