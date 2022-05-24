@@ -133,7 +133,7 @@
 
 			e.preventDefault();
 
-			var uagab_captcha_keys, captcha_response;
+			var fbfg_captcha_keys, captcha_response;
 			if (attr['reCaptchaEnable'] == true && attr['reCaptchaType'] == "v2" && attr['reCaptchaSiteKeyV2']) {
 
 				captcha_response = $form[0].getElementsByClassName("fbfg-forms-recaptcha")[0].value;
@@ -142,14 +142,14 @@
 					return false;
 				} else {
 					$('.fbfg-form-reacaptcha-error-' + attr['block_id']).html('');
-					uagab_captcha_keys = {
+					fbfg_captcha_keys = {
 						'secret': attr['reCaptchaSecretKeyV2'],
 						'sitekey': attr['reCaptchaSiteKeyV2']
 					}
 				}
 			}
 			if (attr['reCaptchaEnable'] == true && attr['reCaptchaType'] == "v3" && attr['reCaptchaSiteKeyV3']) {
-				uagab_captcha_keys = {
+				fbfg_captcha_keys = {
 					'secret': attr['reCaptchaSecretKeyV3'],
 					'sitekey': attr['reCaptchaSiteKeyV3']
 				}
@@ -199,7 +199,7 @@
 					form_data: postData,
 					sendAfterSubmitEmail: attr['sendAfterSubmitEmail'],
 					after_submit_data: after_submit_data,
-					uagab_captcha_keys: uagab_captcha_keys,
+					fbfg_captcha_keys: fbfg_captcha_keys,
 					captcha_response: captcha_response,
 				},
 

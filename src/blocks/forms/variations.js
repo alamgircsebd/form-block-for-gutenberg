@@ -1,10 +1,6 @@
+import { __ } from '@wordpress/i18n';
+import FBFG_Block_Icons from "@Controls/block-icons";
 
-/**
- * WordPress dependencies
- */
-
- import { __ } from '@wordpress/i18n';
-import FBFG_Block_Icons from "@Controls/block-icons"
 /**
  * Template option choices for predefined form layouts.
  *

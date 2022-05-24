@@ -10,7 +10,6 @@ const {
 	RichText
 } = wp.blockEditor
 
-
 export default function save( props ) {
 
 	const { attributes } = props
@@ -33,18 +32,16 @@ export default function save( props ) {
 
 	const renderButtonHtml = () => {
 		
-				return (
-					<button className="fbfg-forms-main-submit-button" >
-								<RichText.Content
-									tagName='div'
-									value={ submitButtonText }
-									className='fbfg-forms-main-submit-button-text'
-								/>
-					</button>
-				);
-			}
-		
-
+		return (
+				<button className="fbfg-forms-main-submit-button" >
+							<RichText.Content
+								tagName='div'
+								value={ submitButtonText }
+								className='fbfg-forms-main-submit-button-text'
+							/>
+				</button>
+			);
+		}
 
 	return (
 		<div className={ classnames(

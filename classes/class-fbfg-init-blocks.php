@@ -44,6 +44,7 @@ class FBFG_Init_Blocks {
 
 		// Hook: Editor assets.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_assets' ) );
+		add_action( 'init', array( $this, 'register_fbfg_cpt' ) );
 
 		if ( version_compare( get_bloginfo( 'version' ), '5.8', '>=' ) ) {
 			add_filter( 'block_categories_all', array( $this, 'register_block_category' ), 10, 2 );
@@ -55,6 +56,27 @@ class FBFG_Init_Blocks {
 			add_action( 'render_block', array( $this, 'render_block' ), 5, 2 );
 		}
 	}
+
+	/**
+	 * Register fbfg custom post type
+	 * 
+	 * @since 1.0.0
+	 * 
+	 * @return void
+	 */
+	public function register_fbfg_cpt() {
+		register_post_type(
+			'fbfg_entries',
+			[
+				'labels' => [
+					'name'          => __( 'Form Entries', 'form-block-for-gutenberg' ),
+					'singular_name' => __( 'Form Entry', 'form-block-for-gutenberg' ),
+				],
+				'public' => true,
+			]
+	)	;
+	}
+
 	/**
 	 * Render block.
 	 *
